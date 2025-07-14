@@ -4,6 +4,8 @@
     1 - Programa objetivo : Simulación de juego
     2 - Escaner de memoria : busca direcciones de memoria de un programa, puede utilizarse para esto el cheat Engine
     3 - Dirección de memoria estática y dirección de memoria dinámica
+        - estática(verde) = nunca cambia la dirección de memoria
+        - dinámica(negro) = cambia con la ejecución del programa
 
     Objetivos:
             - Obtener dirección de memoria de la variable que almacena la cantidad de vidas en mi juego
