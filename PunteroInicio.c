@@ -1,5 +1,14 @@
 /*
    Ejercicio para practicar punteros, acceder al valor de la variable a través de ellos y mostrar la dirección de memoria
+
+    Un puntero es una variable que almacena la dirección de otra variable y permite acceder a la dirección o valor de esta
+        int a = 10; definimos la variable a
+        int *p_a = &a; creo el puntero p_a y le asigno la dirección de la variable a
+        "&" es el operador que me entrega la dirección de la variable
+        "*" es el operador de seguimiento del puntero, con este operador accedo a la dirección de la variable y por ende al valor de la variable,
+        este operador es el de desreferenciación del puntero
+        *p_a = 20; modifica el valor de la variable a accediendo directamente a la dirección de memoria
+
 */
 
 #include <stdio.h>
@@ -21,7 +30,7 @@ int main()
     printf("\nIngrese un valor flotante: ");
     scanf("%f", &flotante);
 
-    //variables de tipo puntero
+    // creamos los punteros
     char *p_cadena;
     int *p_entero;
     float *p_flotante;

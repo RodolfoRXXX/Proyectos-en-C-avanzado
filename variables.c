@@ -60,6 +60,9 @@ int main() {
     printf("Edad: %d\n", edad);
     printf("Altura: %.2f metros\n", altura);
     printf("Inicial: %c\n", inicial);
+    printf("Tamaño de long int: %d bytes\n", sizeof(long int));
+    printf("Tamaño de int: %d bytes\n", sizeof(char));
+    printf("Tamaño de int: %d bytes\n", sizeof(float));
 
     return 0;
 }
