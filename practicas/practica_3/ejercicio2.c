@@ -1,7 +1,9 @@
 /*
     Ejercicio 1
+
     Escriba un programa en C que pida dos números enteros al usuario, y determine si el
     primero es divisible entre el segundo.
+    
 */
 
 #include <stdio.h>
