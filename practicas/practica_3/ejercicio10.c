@@ -8,24 +8,54 @@
 
 #include <stdio.h>
 
+#include <stdio.h>
+
 int main(void)
 {
-    int orden[3];
-    int aux;
+    int a, b, c;
 
-    for (int i = 0; i < (int)(sizeof(minimo) / sizeof(minimo[0])); i++)
-    {
-        printf("Ingrese el elemento nro %d: ", i);
-        scanf("%d", &aux);
+    // Leer los tres números
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &a);
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &b);
+    printf("Ingrese el tercer numero: ");
+    scanf("%d", &c);
 
-        if (i == 0) orden[0] = aux;
-        if (minimo[i] < menor)
-        {
-            menor = minimo[i];
+    int mayor, medio, menor;
+
+    // Comparaciones para ordenar de mayor a menor
+    if (a >= b && a >= c) {
+        mayor = a;
+        if (b >= c) {
+            medio = b;
+            menor = c;
+        } else {
+            medio = c;
+            menor = b;
         }
-        
+    } else if (b >= a && b >= c) {
+        mayor = b;
+        if (a >= c) {
+            medio = a;
+            menor = c;
+        } else {
+            medio = c;
+            menor = a;
+        }
+    } else {
+        mayor = c;
+        if (a >= b) {
+            medio = a;
+            menor = b;
+        } else {
+            medio = b;
+            menor = a;
+        }
     }
-    printf("Del conjunto de valores ingresados el menor es el: %d", menor);
+
+    // Mostrar el resultado
+    printf("Orden de mayor a menor: %d, %d, %d\n", mayor, medio, menor);
 
     return 0;
 }
