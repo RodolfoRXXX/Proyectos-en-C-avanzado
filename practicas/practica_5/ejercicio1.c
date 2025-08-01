@@ -11,10 +11,41 @@
 */
 
 #include <stdio.h>
+#include <unistd.h> 
+#include <time.h>
 
 int main(void)
 {
+    int i, state, vuelta = 1, inicio, final, paso;
 
+    printf("Ingresa el valor del paso del listado: ");
+    scanf("%d", &paso);
+
+    printf("Ingresa el valor inicial: ");
+    scanf("%d", &inicio);
+
+    printf("Ingresa el valor final: ");
+    scanf("%d", &final);
+
+    do
+    {
+        for (i = inicio; i < vuelta * paso; i++)
+        {
+            printf("%d ", i);
+            sleep(1);
+        }
+        printf("Desea continuar? 1 = Si, 0 = No\n");
+        scanf("%d", &state);
+        if (state == 1)
+        {
+            inicio = (vuelta * paso);
+            vuelta++;
+        }
+        
+    } while ((state == 1) && (vuelta < final % paso));
+    
+    printf("Se finaliza la serie con: %d numeros mostrados en series de %d\n", vuelta * paso, paso);
+    
 
     return 0;
 }
