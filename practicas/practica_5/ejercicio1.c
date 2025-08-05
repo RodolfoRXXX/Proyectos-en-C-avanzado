@@ -42,10 +42,9 @@ int main(void)
             vuelta++;
         }
         
-    } while ((state == 1) && (vuelta < final % paso));
+    } while ((state == 1) && (i < final));
     
     printf("Se finaliza la serie con: %d numeros mostrados en series de %d\n", vuelta * paso, paso);
-    
 
     return 0;
 }
